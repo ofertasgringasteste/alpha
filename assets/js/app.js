@@ -1889,7 +1889,7 @@ function iniciarVerificacaoPagamento() {
     // Verificar status a cada 3 segundos
     intervalVerificacao = setInterval(async () => {
         try {
-            const response = await fetch(`./api/checkout/verificar.php?id=${transacaoAtual.id}`);
+            const response = await fetch(`./api/checkout/verificar.js?id=${transacaoAtual.id}`);
             const resultado = await response.json();
             
             if (resultado.success) {

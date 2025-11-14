@@ -283,8 +283,8 @@ async function iniciarPagamentoPixPage() {
         
         // Determinar caminho correto para o endpoint (Abyssal Pay)
         const apiUrl = window.location.pathname.includes('/checkout.html') ? 
-            'api/checkout/abyssalpay-pagamento.php' : 
-            'api/checkout/abyssalpay-pagamento.php';
+            'api/checkout/abyssalpay-pagamento.js' : 
+            'api/checkout/abyssalpay-pagamento.js';
 
         console.log("Fazendo requisição para Abyssal Pay:", apiUrl);
         
@@ -318,7 +318,7 @@ async function iniciarPagamentoPixPage() {
             try {
                 // Tentar rota alternativa (fallback para API antiga se necessário)
                 console.log("Tentando rota alternativa...");
-                const alternativeResponse = await fetch('../api/checkout/abyssalpay-pagamento.php', {
+                const alternativeResponse = await fetch('../api/checkout/abyssalpay-pagamento.js', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -456,7 +456,7 @@ function iniciarVerificacaoPagamentoPage(transactionId) {
 
         try {
             // Fazer chamada real para API de verificação
-            const response = await fetch(`api/checkout/verificar.php?id=${transactionId}`);
+            const response = await fetch(`api/checkout/verificar.js?id=${transactionId}`);
             if (!response.ok) {
                 throw new Error(`Erro na API de verificação: ${response.status}`);
             }
