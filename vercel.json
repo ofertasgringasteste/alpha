@@ -2,7 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.php",
+      "src": "api/checkout/abyssalpay-pagamento.php",
+      "use": "vercel-php"
+    },
+    {
+      "src": "api/checkout/verificar.php",
+      "use": "vercel-php"
+    },
+    {
+      "src": "api/abyssalpay-webhook.php",
       "use": "vercel-php"
     }
   ],
