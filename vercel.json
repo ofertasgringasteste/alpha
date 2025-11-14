@@ -1,41 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/checkout/abyssalpay-pagamento.php",
-      "use": "vercel-php@0.6.2"
-    },
-    {
-      "src": "api/checkout/verificar.php",
-      "use": "vercel-php@0.6.2"
-    },
-    {
-      "src": "api/abyssalpay-webhook.php",
-      "use": "vercel-php@0.6.2"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/checkout/abyssalpay-pagamento.php",
-      "dest": "/api/checkout/abyssalpay-pagamento.php"
-    },
-    {
-      "src": "/api/checkout/verificar.php",
-      "dest": "/api/checkout/verificar.php"
-    },
-    {
-      "src": "/api/abyssalpay-webhook.php",
-      "dest": "/api/abyssalpay-webhook.php"
-    },
-    {
-      "src": "/api/(.*\\.php)$",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/api/(.*)",
