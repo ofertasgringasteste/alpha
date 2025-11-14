@@ -3,13 +3,13 @@
   "outputDirectory": ".",
   "functions": {
     "api/checkout/abyssalpay-pagamento.php": {
-      "runtime": "vercel-php@0.6.0"
+      "runtime": "vercel-php"
     },
     "api/checkout/verificar.php": {
-      "runtime": "vercel-php@0.6.0"
+      "runtime": "vercel-php"
     },
     "api/abyssalpay-webhook.php": {
-      "runtime": "vercel-php@0.6.0"
+      "runtime": "vercel-php"
     }
   },
   "rewrites": [

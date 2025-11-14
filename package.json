@@ -9,10 +9,10 @@
     "build": "echo 'No build needed for static files'"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": ">=20.x"
   },
   "dependencies": {
-    "vercel-php": "^0.6.0"
+    "vercel-php": "^0.6.2"
   }
 }
 
