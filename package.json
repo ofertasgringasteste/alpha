@@ -1,0 +1,14 @@
+{
+  "name": "alphaburguer",
+  "version": "1.0.0",
+  "description": "Alpha Burguer - Sistema de pedidos online",
+  "private": true,
+  "scripts": {
+    "dev": "php -S localhost:8000",
+    "start": "php -S localhost:8000"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
+

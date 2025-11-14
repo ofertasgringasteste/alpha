@@ -1,7 +1,7 @@
 {
-  "name": "cardapio-api-functions",
+  "name": "alphaburguer-api",
   "version": "1.0.0",
-  "description": "API Serverless para o Cardápio Phamela Gourmet",
+  "description": "API Serverless para Alpha Burguer",
   "type": "module",
   "private": true,
   "dependencies": {}
