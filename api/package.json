@@ -1,0 +1,8 @@
+{
+  "name": "cardapio-api-functions",
+  "version": "1.0.0",
+  "description": "API Serverless para o Cardápio Phamela Gourmet",
+  "type": "module",
+  "private": true,
+  "dependencies": {}
+} 

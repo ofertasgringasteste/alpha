@@ -1,0 +1,44 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Diretórios de dependências
+node_modules/
+vendor/
+
+# Arquivos de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios de build
+dist/
+build/
+out/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Arquivos de backup
+*.bak
+*.backup
+*~
+*.swp
+
+# Arquivos temporários
+tmp/
+temp/
+
+# Arquivos de configuração do IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Diretório de backup
+backup/ 

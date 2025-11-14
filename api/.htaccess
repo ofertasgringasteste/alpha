@@ -1,0 +1,43 @@
+# Habilitar reescrita de URL
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Processar requisições OPTIONS
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule .* - [R=200,L]
+</IfModule>
+
+# Configurar cabeçalhos CORS
+<IfModule mod_headers.c>
+    # Permitir solicitações de qualquer origem
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    Header always set Access-Control-Max-Age "3600"
+    
+    # Corrigir tipo MIME para arquivos PHP
+    <FilesMatch "\.php$">
+        ForceType application/x-httpd-php
+    </FilesMatch>
+</IfModule>
+
+# Permitir que arquivos PHP sejam executados
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# Se um arquivo não existe, tentar o .php
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php [L,QSA]
+</IfModule>
+
+# Configurações de segurança
+<IfModule mod_php7.c>
+    php_flag display_errors Off
+    php_value max_execution_time 300
+    php_value max_input_time 300
+    php_value memory_limit 128M
+</IfModule> 
