@@ -18,14 +18,12 @@
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
-    },
+    }
+  ],
+  "rewrites": [
     {
-      "src": "/(.*\\.(html|css|js|jpg|jpeg|png|gif|svg|ico|woff|woff2|ttf|eot))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/$1"
     }
   ],
   "headers": [
