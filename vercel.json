@@ -8,6 +8,18 @@
   ],
   "routes": [
     {
+      "src": "/api/checkout/abyssalpay-pagamento.php",
+      "dest": "/api/checkout/abyssalpay-pagamento.php"
+    },
+    {
+      "src": "/api/checkout/verificar.php",
+      "dest": "/api/checkout/verificar.php"
+    },
+    {
+      "src": "/api/abyssalpay-webhook.php",
+      "dest": "/api/abyssalpay-webhook.php"
+    },
+    {
       "src": "/api/(.*\\.php)$",
       "dest": "/api/$1"
     },
@@ -26,11 +38,11 @@
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, OPTIONS"
+          "value": "GET, POST, OPTIONS, PUT, DELETE"
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
+          "value": "Content-Type, Authorization, X-Requested-With"
         }
       ]
     }

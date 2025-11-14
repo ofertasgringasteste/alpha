@@ -23,6 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit(0);
 }
 
+// Validar método HTTP - aceitar POST e GET (GET para debug)
+if (!in_array($_SERVER['REQUEST_METHOD'], ['POST', 'GET'])) {
+    http_response_code(405);
+    echo json_encode([
+        'success' => false,
+        'error' => 'Método não permitido. Use POST.',
+        'method' => $_SERVER['REQUEST_METHOD']
+    ]);
+    exit(0);
+}
+
 // Carregar configurações
 require_once __DIR__ . '/../abyssalpay_config.php';
 
